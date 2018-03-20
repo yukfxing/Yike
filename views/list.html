@@ -1,0 +1,23 @@
+
+<div class="posts-title">
+	<img src="{{column.icon}}" alt="">
+	<h5>{{column.name}}</h5>
+	<p>{{column.description}}</p>
+</div>
+<div class="item">
+	<ul class="posts">
+		<!-- 文章 -->
+		<li ng-repeat="post in posts">
+			<div class="cont">
+				<h3>{{post.title}}</h3>
+				<div class="brief">
+					<p>{{post.abstract}}</p>
+					<div class="thumb" ng-if="post.display_style == 10002">
+						<img src="{{post.thumbs[0].small.url}}" alt="">
+					</div>
+				</div>							
+			</div>
+		</li>
+	</ul>
+</div>
+
